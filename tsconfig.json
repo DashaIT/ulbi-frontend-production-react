@@ -6,7 +6,7 @@
         "module": "es6",
         // в какую спецификацию компилируем
         "target": "es5",
-        "jsx": "react",
+        "jsx": "react-jsx",
         // компилятор будет обрабатывать не только ts, но и js
         "allowJs": true,
         "baseUrl": ".",
