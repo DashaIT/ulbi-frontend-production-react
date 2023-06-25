@@ -1,7 +1,7 @@
 import path from "path";
 import { BuildOptions } from "./types/config";
 import webpack from 'webpack';
-import { buildPlagins } from "./buildPlagins";
+import { buildPlugins } from "./buildPlugins";
 import { buildLoaders } from "./buildLoaders";
 import { buildResolves } from "./buildResolvers";
 
@@ -17,9 +17,9 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             clean: true
         },
         mode,
-        plugins: buildPlagins(options),
+        plugins: buildPlugins(options),
         module: {
-            rules: buildLoaders(),
+            rules: buildLoaders(options),
           },
         resolve: buildResolves(),
         devtool: isDev ? 'inline-source-map' : undefined,
