@@ -1,11 +1,22 @@
-import { Counter } from './components/Counter';
-import './index.scss'
+import React, { Suspense } from 'react'
+import { Link, Route, Routes } from 'react-router-dom'
+import './index.scss';
+import { AboutPageAsync } from './pages/AboutPage/AboutePage.async';
+import { MainPageAsync } from './pages/MainPage/MainPage.async';
 
 export const App = () => {
     return(
         <div className='app'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ratione at ullam modi ipsum rerum ad! Quis necessitatibus ipsa eius itaque vitae odit cumque ex facere eveniet, nihil quibusdam rem officiis culpa nisi. Minus ipsum consectetur facilis, nesciunt illo ad, officiis dolorem enim, non necessitatibus fugiat impedit velit eligendi atque.
-           <Counter />
+            <Link to='/'>Главная</Link>
+            <Link to='/about'>О нас</Link>
+           
+            <Suspense fallback={<div>Loading</div>}>
+                <Routes >
+                    <Route path={'/about'} element={<AboutPageAsync />}/>
+                    <Route path={'/'} element={<MainPageAsync />}/>
+                </Routes>
+            </Suspense>                
+           
         </div>
     )
 }

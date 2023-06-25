@@ -3,7 +3,7 @@
         "outDir": "./dist/",
         "noImplicitAny": true,
         // подсвечивает места, где не указан тип
-        "module": "es6",
+        "module": "esnext",
         // в какую спецификацию компилируем
         "target": "es5",
         "jsx": "react-jsx",
