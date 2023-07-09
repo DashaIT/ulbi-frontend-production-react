@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
         "outDir": "./dist/",
-        "noImplicitAny": true,
         // подсвечивает места, где не указан тип
+        "noImplicitAny": true,
         "module": "esnext",
         // в какую спецификацию компилируем
         "target": "es5",
@@ -10,6 +10,9 @@
         // компилятор будет обрабатывать не только ts, но и js
         "allowJs": true,
         "baseUrl": ".",
+        "paths": {
+            "*": ["./src/*"]
+        },
         "moduleResolution": "node",
         // esModuleInterop позволяет работать с пакетами, которые используют
         // common js как с обычными пакета с помощью import (require() module.export) = common js
