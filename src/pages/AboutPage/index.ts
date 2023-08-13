@@ -1,1 +1,1 @@
-export {AboutPageAsync as AboutPage} from "./ui/AboutePage.async";
+export { AboutPageAsync as AboutPage } from './ui/AboutePage.async';
