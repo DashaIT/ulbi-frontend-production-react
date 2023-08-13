@@ -1,13 +1,13 @@
 @import "reset";
 @import "variables/global";
-@import 'themes/dark';
-@import 'themes/light';
+@import "themes/dark";
+@import "themes/light";
 
 .app {
     font: var(--font-m);
     background-color: var(--bg-color);
     color: var(--primary-color);
-    min-height: 100vh;    
+    min-height: 100vh;
 }
 
 .content-page {
@@ -15,6 +15,6 @@
 }
 
 .page-wrapper {
-    flex-grow: 1; 
+    flex-grow: 1;
     padding: 20px;
 }
