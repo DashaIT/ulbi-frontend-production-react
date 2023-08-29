@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     extends: [
         'airbnb',
@@ -48,7 +49,8 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
         'no-console': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string': ['warn', { markupOnly: true }],
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
     },
     globals: {
         __IS_DEV__: true,
