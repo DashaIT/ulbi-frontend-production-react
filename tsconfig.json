@@ -39,5 +39,5 @@
         "./config/jest/jest-setup.ts",
         "./src/**/*",
     ],
-    
+
 }
