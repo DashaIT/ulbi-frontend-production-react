@@ -22,6 +22,7 @@ export default ({ config }: {config: webpack.Configuration}) => {
     //     return rule;
     // });
     const rules = config.module!.rules as RuleSetRule[];
+    // eslint-disable-next-line no-param-reassign
     config.module!.rules = rules.map((rule) => {
         if (/svg/.test(rule.test as string)) {
             return { ...rule, exclude: /\.svg$/i };
