@@ -5,8 +5,6 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import MainPage from './MainPage';
 
-
-
 export default {
     title: 'pages/MainPage',
     component: MainPage,
@@ -14,11 +12,11 @@ export default {
         backgroundColor: { control: 'color' },
     },
     args: {
-        to: '/'
-    }
+        to: '/',
+    },
 } as ComponentMeta<typeof MainPage>;
-
-const Template: ComponentStory<typeof MainPage> = (args) => <MainPage {...args} />;
+/* tslint:disable-next-line */
+const Template: ComponentStory<typeof MainPage> = (args: {}) => <MainPage {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};
@@ -26,4 +24,4 @@ Light.args = {};
 export const Dark = Template.bind({});
 Dark.args = {};
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
