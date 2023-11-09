@@ -21,7 +21,7 @@
 .collapseBtn {
     position: absolute;
     bottom: 32px;
-    right: -32px
+    right: -32px;
 }
 
 .items {
@@ -48,6 +48,7 @@
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
+
     .switchers {
         flex-direction: column;
         align-items: center;
