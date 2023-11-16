@@ -3,8 +3,8 @@ import { AppModal } from 'shared/ui/AppModal/AppModal';
 import { useTranslation } from 'react-i18next';
 import { AppButton } from 'shared/ui/AppButton';
 import { ButtomTheme } from 'shared/ui/AppButton/ui/AppButton';
-import cls from './Navbar.module.scss';
 import { useCallback, useState } from 'react';
+import cls from './Navbar.module.scss';
 
 interface NavbarProps {
     className?: string
