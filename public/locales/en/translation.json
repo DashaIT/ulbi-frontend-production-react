@@ -1,5 +1,10 @@
 {
   "Тестовый пример": "Test example",
   "Язык": "English",
-  "Cтраница не найдена": "Page not found"
+  "Cтраница не найдена": "Page not found",
+  "Короткий язык": "EN",
+  "Главная": "MainPage",
+  "О нас": "About us",
+  "decrement": "decrement",
+  "increment": "increment"
 }
