@@ -3,3 +3,4 @@ dist
 .vscode
 .loki/report.html
 .loki/report.json
+storybook-static
