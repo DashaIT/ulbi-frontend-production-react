@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "outDir": "./dist/",
-        "strict": false,
+        "strict": true,
         // подсвечивает места, где не указан тип
         "noImplicitAny": true,
         "module": "esnext",

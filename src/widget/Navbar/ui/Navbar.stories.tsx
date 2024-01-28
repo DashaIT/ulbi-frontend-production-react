@@ -14,12 +14,10 @@ export default {
     },
 } as ComponentMeta<typeof Navbar>;
 
-const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
+const Template: ComponentStory<typeof Navbar> = () => <Navbar />;
 
 export const AuthNavbar = Template.bind({});
-AuthNavbar.args = {
-    children: 'Text',
-};
+
 AuthNavbar.decorators = [StoreDecorator({
     user: {
         authData: {

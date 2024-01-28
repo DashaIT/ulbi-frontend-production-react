@@ -4,7 +4,7 @@ import { AppButton } from 'shared/ui/AppButton';
 import { AppInput } from 'shared/ui/AppInput/ui/AppInput';
 import { ButtomTheme } from 'shared/ui/AppButton/ui/AppButton';
 import { useSelector } from 'react-redux';
-import { memo, useCallback, useEffect } from 'react';
+import { memo, useCallback } from 'react';
 import { loginActions, loginReducer } from 'features/AuthByUserName/model/slice/loginSlice';
 import { AppText, AppTextTheme } from 'shared/ui/AppText/AppText';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
