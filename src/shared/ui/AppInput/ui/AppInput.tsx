@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import React, {
-    InputHTMLAttributes, memo, useEffect, useRef, useState,
+    InputHTMLAttributes, memo, useEffect, useRef,
 } from 'react';
 import cls from './AppInput.module.scss';
 
@@ -53,5 +53,3 @@ export const AppInput = memo((props: AppInputProps) => {
         </div>
     );
 });
-
-AppInput.displayName = 'AppInput';

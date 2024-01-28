@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "Darya",
+    "lastName": "Filinova",
+    "age": 23,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Chita",
+    "username": "admin",
+    "avatar": "https://images.unsplash.com/photo-1517495146229-65df424a721e?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
 }

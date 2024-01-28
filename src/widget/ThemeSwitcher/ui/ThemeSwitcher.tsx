@@ -5,13 +5,14 @@ import LightIcon from 'shared/assets/icons/theme-light.svg';
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import { AppButton } from 'shared/ui/AppButton';
 import { ButtomTheme } from 'shared/ui/AppButton/ui/AppButton';
+import { memo } from 'react';
 import cls from './ThemeSwitcher.module.scss';
 
 interface ThemeSwitcherProps {
     className?: string
 }
 
-export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
+export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
     const { theme, toggleTheme } = useTheme();
 
     return (
@@ -24,4 +25,4 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
 
         </AppButton>
     );
-};
+});
