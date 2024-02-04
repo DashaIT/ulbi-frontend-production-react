@@ -1,16 +1,17 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import React, {
     InputHTMLAttributes, memo, useEffect, useRef,
 } from 'react';
 import cls from './AppInput.module.scss';
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readonly'>
 
 interface AppInputProps extends HTMLInputProps {
     className?: string;
-    value?: string;
+    value?: string | number;
     onChange?: (value: string) => void;
     autofocus?: boolean;
+    readonly?: boolean;
 }
 
 export const AppInput = memo((props: AppInputProps) => {
@@ -21,6 +22,7 @@ export const AppInput = memo((props: AppInputProps) => {
         type = 'text',
         placeholder,
         autofocus,
+        readonly,
         ...otherProps
     } = props;
     const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,6 +37,10 @@ export const AppInput = memo((props: AppInputProps) => {
         }
     }, [autofocus]);
 
+    const mods: Mods = {
+        [cls.readonly]: 'readonly',
+    };
+
     return (
         <div className={classNames(cls.inputWrapper, {}, [className])}>
             {placeholder && (
@@ -48,6 +54,7 @@ export const AppInput = memo((props: AppInputProps) => {
                 value={value}
                 onChange={onChangeHandler}
                 className={cls.input}
+                readOnly={readonly}
                 {...otherProps}
             />
         </div>
