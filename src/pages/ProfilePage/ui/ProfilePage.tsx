@@ -13,9 +13,9 @@ import { getProfileIsLoading } from 'entities/Profile/model/selectors/getProfile
 import { getProfileForm } from 'entities/Profile/model/selectors/getProfileForm/getProfileForm';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
-import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 import { AppText, AppTextTheme } from 'shared/ui/AppText/AppText';
 import { ValidateProfileError } from 'entities/Profile/model/types/profile';
+import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
     profile: profileReducer,
@@ -46,7 +46,9 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     };
 
     useEffect(() => {
-        dispatch(fetchProfileData());
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData());
+        }
     }, [dispatch]);
 
     const onChangeFirstname = useCallback((value?: string) => {
