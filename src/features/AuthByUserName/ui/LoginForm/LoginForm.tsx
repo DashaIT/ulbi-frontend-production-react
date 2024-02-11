@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { AppButton } from 'shared/ui/AppButton';
 import { AppInput } from 'shared/ui/AppInput/ui/AppInput';
-import { ButtomTheme } from 'shared/ui/AppButton/ui/AppButton';
+import { ButtonTheme } from 'shared/ui/AppButton/ui/AppButton';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { loginActions, loginReducer } from 'features/AuthByUserName/model/slice/loginSlice';
@@ -73,7 +73,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                 />
                 <AppButton
                     className={cls.loginBtn}
-                    theme={ButtomTheme.OUTLINE}
+                    theme={ButtonTheme.OUTLINE}
                     onClick={onLoginClick}
                     disabled={isLoading}
                 >

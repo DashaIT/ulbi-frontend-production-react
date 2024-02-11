@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { AppText } from 'shared/ui/AppText/AppText';
 import { AppButton } from 'shared/ui/AppButton';
-import { ButtomTheme } from 'shared/ui/AppButton/ui/AppButton';
+import { ButtonTheme } from 'shared/ui/AppButton/ui/AppButton';
 import { useSelector } from 'react-redux';
 import { getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
 import { useCallback } from 'react';
@@ -39,7 +39,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
             {readonly ? (
                 <AppButton
                     className={cls.editBtn}
-                    theme={ButtomTheme.OUTLINE}
+                    theme={ButtonTheme.OUTLINE}
                     onClick={onEdit}
                 >
                     {t('Редактировать')}
@@ -48,14 +48,14 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
                 <>
                     <AppButton
                         className={cls.editBtn}
-                        theme={ButtomTheme.OUTLINE_RED}
+                        theme={ButtonTheme.OUTLINE_RED}
                         onClick={onCancelEdit}
                     >
                         {t('Отменить')}
                     </AppButton>
                     <AppButton
                         className={cls.editBtn}
-                        theme={ButtomTheme.OUTLINE}
+                        theme={ButtonTheme.OUTLINE}
                         onClick={onSave}
                     >
                         {t('Сохранить')}

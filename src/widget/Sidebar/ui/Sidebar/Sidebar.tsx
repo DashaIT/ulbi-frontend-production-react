@@ -3,7 +3,7 @@ import { memo, useMemo, useState } from 'react';
 import { ThemeSwitcher } from 'widget/ThemeSwitcher';
 import { LangSwitcher } from 'widget/LangSwitcher/ui/LangSwitcher';
 import { AppButton } from 'shared/ui/AppButton';
-import { ButtomTheme, ButtonSize } from 'shared/ui/AppButton/ui/AppButton';
+import { ButtonTheme, ButtonSize } from 'shared/ui/AppButton/ui/AppButton';
 import { sidebarItemsList as SidebarItemsList } from 'widget/Sidebar/model/items';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import cls from './Sidebar.module.scss';
@@ -37,7 +37,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 type="button"
                 onClick={onToggle}
                 className={cls.collapseBtn}
-                theme={ButtomTheme.BACKGROUND_INVERTED}
+                theme={ButtonTheme.BACKGROUND_INVERTED}
                 square
                 size={ButtonSize.L}
             >

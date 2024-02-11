@@ -4,7 +4,7 @@ import {
 } from 'react';
 import cls from './AppButton.module.scss';
 
-export enum ButtomTheme {
+export enum ButtonTheme {
     CLEAR = 'clear',
     CLEAR_INVERTED = 'clearInverted',
     OUTLINE = 'outline',
@@ -20,7 +20,7 @@ export enum ButtonSize {
 }
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     className?: string,
-    theme?: ButtomTheme,
+    theme?: ButtonTheme,
     square?: boolean,
     children?: ReactNode,
     size?: ButtonSize,
@@ -31,7 +31,7 @@ export const AppButton = memo((props: AppButtonProps) => {
     const {
         className,
         children,
-        theme = ButtomTheme.OUTLINE,
+        theme = ButtonTheme.OUTLINE,
         square,
         size = ButtonSize.M,
         disabled,
