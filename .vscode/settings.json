@@ -7,5 +7,8 @@
     "i18n-ally.keystyle": "nested",
     "files.associations": {
         "**/.fttemplates/**": "plaintext",
-    }
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
 }
