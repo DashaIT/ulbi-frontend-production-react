@@ -3,22 +3,17 @@ import { ThunkConfig } from 'app/providers/StoreProvider';
 import { User, userActions } from 'entities/User';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 
-interface LoginByUserNameProps {
+interface LoginByUsernameProps {
     username: string;
     password: string;
 }
 
-enum LoginError {
-    INCORRECT_DATA = '',
-    SERVER_ERROR= '',
-}
-
 export const loginByUserName = createAsyncThunk<
     User,
-    LoginByUserNameProps,
+    LoginByUsernameProps,
     ThunkConfig<string>
 >(
-    'users/loginByUserName',
+    'login/loginByUserName',
     async (authData, thunkApi) => {
         const { extra, dispatch, rejectWithValue } = thunkApi;
 
@@ -28,13 +23,13 @@ export const loginByUserName = createAsyncThunk<
             if (!response.data) {
                 throw new Error();
             }
+
             localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
             dispatch(userActions.setAuthData(response.data));
-
             return response.data;
-        } catch (error) {
-            console.log(error);
-            return rejectWithValue('ERROR');
+        } catch (e) {
+            console.log(e);
+            return rejectWithValue('error');
         }
     },
 );

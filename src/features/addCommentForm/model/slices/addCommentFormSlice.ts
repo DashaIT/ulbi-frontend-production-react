@@ -1,13 +1,12 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AddCommentFormSchema } from '../types/addCommentForm';
 
 const initialState: AddCommentFormSchema = {
     text: '',
-    error: undefined,
 };
 
-const addCommentformSlice = createSlice({
-    name: 'addCommentform',
+export const addCommentFormSlice = createSlice({
+    name: 'addCommentForm',
     initialState,
     reducers: {
         setText: (state, action: PayloadAction<string>) => {
@@ -16,11 +15,11 @@ const addCommentformSlice = createSlice({
     },
     // extraReducers: (builder) => {
     //     builder
-    //         .addCase(loginByUserName.pending, (state, action) => {
+    //         .addCase(loginByUserName.pending, (state) => {
     //             state.error = undefined;
     //             state.isLoading = true;
     //         })
-    //         .addCase(loginByUserName.fulfilled, (state, action) => {
+    //         .addCase(loginByUserName.fulfilled, (state) => {
     //             state.isLoading = false;
     //         })
     //         .addCase(loginByUserName.rejected, (state, action) => {
@@ -30,5 +29,6 @@ const addCommentformSlice = createSlice({
     // },
 });
 
-export const { actions: addCommentformActions } = addCommentformSlice;
-export const { reducer: addCommentformReducer } = addCommentformSlice;
+// Action creators are generated for each case reducer function
+export const { actions: addCommentFormActions } = addCommentFormSlice;
+export const { reducer: addCommentFormReducer } = addCommentFormSlice;

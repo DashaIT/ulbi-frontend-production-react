@@ -1,7 +1,7 @@
-import { FC, lazy } from 'react';
-import { ArticleDetailsPageProps } from './ArticleDetailsPage';
+import { lazy } from 'react';
 
-export const ArticleDetailsPageAsync = lazy<FC<ArticleDetailsPageProps>>(() => new Promise((resolve) => {
+export const ArticleDetailsPageAsync = lazy(() => new Promise((resolve) => {
     // @ts-ignore
-    setTimeout(() => resolve(import('./ArticleDetailsPage')), 1500);
+    // ТАК В РЕАЛЬНЫХ ПРОЕКТАХ НЕ ДЕЛАТЬ!!!!! ДЕЛАЕМ ДЛЯ КУРСА!
+    setTimeout(() => resolve(import('./ArticleDetailsPage')), 400);
 }));
