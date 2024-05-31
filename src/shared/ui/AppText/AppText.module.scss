@@ -1,20 +1,28 @@
 .title {
-    color: var((--primary-color));
-    font: var(--font-l);
+    color: var(--primary-color);
 }
 
 .text {
-    color: var((--secondary-color));
-    font: var(--font-m);
+    color: var(--secondary-color);
 }
 
 .error {
     .title {
-        color: var(--error-light);
+        color: var(--red-light);
     }
 
     .text {
-        color: var(--error-dark);
+        color: var(--red-dark);
+    }
+}
+
+.inverted {
+    .title {
+        color: var(--inverted-primary-color);
+    }
+
+    .text {
+        color: var(--inverted-secondary-color);
     }
 }
 

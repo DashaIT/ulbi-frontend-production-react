@@ -1,15 +1,17 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { AppButton } from 'shared/ui/AppButton';
-import { ButtonTheme } from 'shared/ui/AppButton/ui/AppButton';
-import { memo, useCallback, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
+import { AppButton, ButtonTheme } from 'shared/ui/AppButton';
 import { LoginModal } from 'features/AuthByUserName';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
+import { AppText, AppTextTheme } from 'shared/ui/AppText/AppText';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
-    className?: string
+    className?: string;
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {
@@ -32,7 +34,19 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
     if (authData) {
         return (
-            <header className={classNames(cls.navbar, {}, [className])}>
+            <header className={classNames(cls.Navbar, {}, [className])}>
+                <AppText
+                    className={cls.appName}
+                    title={t('Ulbi TV App')}
+                    theme={AppTextTheme.INVERTED}
+                />
+                <AppLink
+                    to={RoutePath.article_create}
+                    theme={AppLinkTheme.SECONDARY}
+                    className={cls.createBtn}
+                >
+                    {t('Создать статью')}
+                </AppLink>
                 <AppButton
                     theme={ButtonTheme.CLEAR_INVERTED}
                     className={cls.links}
@@ -45,7 +59,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }
 
     return (
-        <header className={classNames(cls.navbar, {}, [className])}>
+        <header className={classNames(cls.Navbar, {}, [className])}>
             <AppButton
                 theme={ButtonTheme.CLEAR_INVERTED}
                 className={cls.links}
@@ -53,7 +67,12 @@ export const Navbar = memo(({ className }: NavbarProps) => {
             >
                 {t('Войти')}
             </AppButton>
-            {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} /> }
+            {isAuthModal && (
+                <LoginModal
+                    isOpen={isAuthModal}
+                    onClose={onCloseModal}
+                />
+            )}
         </header>
     );
 });

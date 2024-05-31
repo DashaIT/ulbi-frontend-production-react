@@ -3,6 +3,7 @@ import { memo } from 'react';
 import cls from './AppText.module.scss';
 
 export enum AppTextTheme {
+    INVERTED = 'inverted',
     PRIMARY = 'primary',
     ERROR = 'error'
 }
