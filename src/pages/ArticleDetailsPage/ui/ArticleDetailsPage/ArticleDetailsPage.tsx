@@ -10,7 +10,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { AppButton, ButtonTheme } from 'shared/ui/AppButton';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widget/Page/Page';
 import { AppText } from 'shared/ui/AppText/AppText';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
