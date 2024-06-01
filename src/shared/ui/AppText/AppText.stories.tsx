@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { AppText, AppTextTheme } from './AppText';
+import { AppText, AppTextTheme, TextSize } from './AppText';
 
 export default {
     title: 'shared/AppText',
@@ -53,4 +53,25 @@ Error.args = {
     title: 'Lorem ipsum',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     theme: AppTextTheme.ERROR,
+};
+
+export const SizeL = Template.bind({});
+SizeL.args = {
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
+    size: TextSize.L,
+};
+
+export const SizeM = Template.bind({});
+SizeM.args = {
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
+    size: TextSize.M,
+};
+
+export const SizeS = Template.bind({});
+SizeS.args = {
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
+    size: TextSize.S,
 };
