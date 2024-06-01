@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Button } from '../Button/Button';
+import { AppButton } from '../AppButton';
 import { Dropdown } from './Dropdown';
 
 export default {
@@ -16,7 +16,7 @@ const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} 
 
 export const Normal = Template.bind({});
 Normal.args = {
-    trigger: <Button>Open</Button>,
+    trigger: <AppButton>Open</AppButton>,
     items: [
         {
             content: 'first',
