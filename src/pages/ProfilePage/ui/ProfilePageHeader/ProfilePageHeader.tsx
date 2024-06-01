@@ -1,31 +1,30 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { AppText } from 'shared/ui/AppText/AppText';
-import { AppButton } from 'shared/ui/AppButton';
-import { ButtonTheme } from 'shared/ui/AppButton/ui/AppButton';
-import { useSelector } from 'react-redux';
+import { AppButton, ButtonTheme } from 'shared/ui/AppButton';
+import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
 import {
     getProfileData, getProfileReadonly, profileActions, updateProfileData,
 } from 'entities/Profile';
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from 'entities/User';
-import cls from './ProfilePageHeader.module.scss';
+import { HStack } from 'shared/ui/Stack/HStack/HStack';
 
 interface ProfilePageHeaderProps {
-  className?: string;
+    className?: string;
 }
 
-export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
-    const { t } = useTranslation('profile');
+export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
+    const {
+        className,
+    } = props;
 
+    const { t } = useTranslation('profile');
     const authData = useSelector(getUserAuthData);
     const profileData = useSelector(getProfileData);
-
     const canEdit = authData?.id === profileData?.id;
-
     const readonly = useSelector(getProfileReadonly);
-
     const dispatch = useAppDispatch();
 
     const onEdit = useCallback(() => {
@@ -41,40 +40,37 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.profilepageheader, {}, [className])}>
+        <HStack max justify="between" className={classNames('', {}, [className])}>
             <AppText title={t('Профиль')} />
-
             {canEdit && (
-                <div className={cls.btnsWrapper}>
-                    {readonly ? (
-                        <AppButton
-                            className={cls.editBtn}
-                            theme={ButtonTheme.OUTLINE}
-                            onClick={onEdit}
-                        >
-                            {t('Редактировать')}
-                        </AppButton>
-                    ) : (
-                        <>
+                <div>
+                    {readonly
+                        ? (
                             <AppButton
-                                className={cls.editBtn}
-                                theme={ButtonTheme.OUTLINE_RED}
-                                onClick={onCancelEdit}
-                            >
-                                {t('Отменить')}
-                            </AppButton>
-                            <AppButton
-                                className={cls.editBtn}
                                 theme={ButtonTheme.OUTLINE}
-                                onClick={onSave}
+                                onClick={onEdit}
                             >
-                                {t('Сохранить')}
+                                {t('Редактировать')}
                             </AppButton>
-                        </>
-                    )}
+                        )
+                        : (
+                            <HStack gap="8">
+                                <AppButton
+                                    theme={ButtonTheme.OUTLINE_RED}
+                                    onClick={onCancelEdit}
+                                >
+                                    {t('Отменить')}
+                                </AppButton>
+                                <AppButton
+                                    theme={ButtonTheme.OUTLINE}
+                                    onClick={onSave}
+                                >
+                                    {t('Сохранить')}
+                                </AppButton>
+                            </HStack>
+                        )}
                 </div>
             )}
-
-        </div>
+        </HStack>
     );
 };
