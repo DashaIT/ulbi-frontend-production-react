@@ -2,11 +2,11 @@ import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { AppText, AppTextTheme } from 'shared/ui/AppText/AppText';
 import { useTranslation } from 'react-i18next';
 import { AppInput } from 'shared/ui/AppInput';
-import { Profile } from 'entities/Profile/model/types/profile';
 import { AppLoader } from 'shared/ui/AppLoader/AppLoader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Currency, CurrencySelect } from 'entities/Currency';
 import { Country, CountrySelect } from 'entities/Country';
+import { Profile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';
 
 interface ProfileCardProps {
