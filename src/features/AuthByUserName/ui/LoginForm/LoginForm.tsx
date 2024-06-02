@@ -1,20 +1,19 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { AppButton } from 'shared/ui/AppButton';
-import { AppInput } from 'shared/ui/AppInput/ui/AppInput';
-import { ButtonTheme } from 'shared/ui/AppButton/ui/AppButton';
+import { AppButton, ButtonTheme } from 'shared/ui/AppButton';
+import { AppInput } from 'shared/ui/AppInput';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { AppText, AppTextTheme } from 'shared/ui/AppText/AppText';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
-import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
-import cls from './LoginForm.module.scss';
+import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
+import { loginActions, loginReducer } from '../../model/slice/loginSlice';
+import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
     className?: string;
@@ -28,13 +27,12 @@ const initialReducers: ReducersList = {
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
-
     const username = useSelector(getLoginUsername);
     const password = useSelector(getLoginPassword);
-    const error = useSelector(getLoginError);
     const isLoading = useSelector(getLoginIsLoading);
+    const error = useSelector(getLoginError);
 
-    const onChangeUserName = useCallback((value: string) => {
+    const onChangeUsername = useCallback((value: string) => {
         dispatch(loginActions.setUsername(value));
     }, [dispatch]);
 
@@ -47,37 +45,38 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         if (result.meta.requestStatus === 'fulfilled') {
             onSuccess();
         }
-    }, [dispatch, username, password, onSuccess]);
+    }, [onSuccess, dispatch, password, username]);
 
     return (
-        <DynamicModuleLoader reducers={initialReducers}>
-            <div className={classNames(cls.loginform, {}, [className])}>
+        <DynamicModuleLoader
+            removeAfterUnmount
+            reducers={initialReducers}
+        >
+            <div className={classNames(cls.LoginForm, {}, [className])}>
                 <AppText title={t('Форма авторизации')} />
-                {error && <AppText text={t('Неправильный логин или пароль')} theme={AppTextTheme.ERROR} />}
+                {error && <AppText text={t('Вы ввели неверный логин или пароль')} theme={AppTextTheme.ERROR} />}
                 <AppInput
+                    autofocus
                     type="text"
-                    name="login"
                     className={cls.input}
-                    autoFocus
                     placeholder={t('Введите username')}
-                    onChange={onChangeUserName}
+                    onChange={onChangeUsername}
                     value={username}
                 />
                 <AppInput
                     type="text"
-                    name="password"
                     className={cls.input}
                     placeholder={t('Введите пароль')}
                     onChange={onChangePassword}
                     value={password}
                 />
                 <AppButton
-                    className={cls.loginBtn}
                     theme={ButtonTheme.OUTLINE}
+                    className={cls.loginBtn}
                     onClick={onLoginClick}
                     disabled={isLoading}
                 >
-                    {t('Bойти')}
+                    {t('Войти')}
                 </AppButton>
             </div>
         </DynamicModuleLoader>

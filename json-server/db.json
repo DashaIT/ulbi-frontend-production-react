@@ -547,6 +547,12 @@
       "userId": "2",
       "text": "ыыыыыыыыыыыыыы",
       "id": "LJ6DGf2"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "888899",
+      "id": "JYFdEcA"
     }
   ],
   "users": [
@@ -554,21 +560,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://images.unsplash.com/photo-1517495146229-65df424a721e?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://masterpiecer-images.s3.yandex.net/1e8639b574c611ee9dab963c1ee369ba:upscaled"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://masterpiecer-images.s3.yandex.net/1e8639b574c611ee9dab963c1ee369ba:upscaled"
     }
   ],
