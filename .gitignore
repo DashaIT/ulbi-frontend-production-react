@@ -4,3 +4,4 @@ dist
 .loki/report.html
 .loki/report.json
 storybook-static
+/reports
