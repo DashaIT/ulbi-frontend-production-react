@@ -7,6 +7,10 @@ import {
 export {
     StoreProvider,
     createReduxStore,
+
+};
+
+export type {
     AppDispatch,
     StateSchema,
     ReduxStoreWithManager,
