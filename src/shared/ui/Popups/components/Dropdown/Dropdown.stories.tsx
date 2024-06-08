@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { AppButton } from '../AppButton';
+import { AppButton } from '../../../AppButton';
 import { Dropdown } from './Dropdown';
 
 export default {
