@@ -1,7 +1,7 @@
-import { Mods, classNames } from '@/shared/lib/classNames/classNames';
 import {
     ButtonHTMLAttributes, ReactNode, memo,
 } from 'react';
+import { Mods, classNames } from '@/shared/lib/classNames/classNames';
 import cls from './AppButton.module.scss';
 
 export enum ButtonTheme {
@@ -25,6 +25,7 @@ interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     children?: ReactNode,
     size?: ButtonSize,
     disabled?: boolean
+    fullWidth?: boolean;
 }
 
 export const AppButton = memo((props: AppButtonProps) => {
@@ -35,6 +36,7 @@ export const AppButton = memo((props: AppButtonProps) => {
         square,
         size = ButtonSize.M,
         disabled,
+        fullWidth,
         ...otherProps
     } = props;
 
@@ -43,6 +45,7 @@ export const AppButton = memo((props: AppButtonProps) => {
         [cls.square]: square,
         [cls[size]]: true,
         [cls.disabled]: disabled,
+        [cls.fullWidth]: fullWidth,
     };
 
     return (
