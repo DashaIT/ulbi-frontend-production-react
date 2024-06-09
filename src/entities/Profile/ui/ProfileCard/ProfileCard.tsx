@@ -1,5 +1,5 @@
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { AppText, TextAlign, AppTextTheme } from '@/shared/ui/AppText/AppText';
 import { AppInput } from '@/shared/ui/AppInput';
 import { AppLoader } from '@/shared/ui/AppLoader/AppLoader';
