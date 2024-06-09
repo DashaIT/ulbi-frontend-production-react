@@ -3,8 +3,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 
 import DarkIcon from '@/shared/assets/icons/theme-dark.svg';
 import LightIcon from '@/shared/assets/icons/theme-light.svg';
-import { AppButton } from '@/shared/ui/AppButton';
-import { ButtonTheme } from '@/shared/ui/AppButton/ui/AppButton';
+import { AppButton, ButtonTheme } from '@/shared/ui/AppButton';
 import cls from './ThemeSwitcher.module.scss';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { Theme } from '@/shared/const/theme';
