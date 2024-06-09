@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { AppButton } from 'shared/ui/AppButton';
+import { AppButton } from '@/shared/ui/AppButton';
 import { useTranslation } from 'react-i18next';
 import { CounterActions } from '../model/slice/counterSlice';
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue';

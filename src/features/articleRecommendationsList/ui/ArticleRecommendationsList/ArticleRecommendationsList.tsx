@@ -1,9 +1,9 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import { AppText, TextSize } from 'shared/ui/AppText/AppText';
-import { ArticleList } from 'entities/Article';
-import { VStack } from 'shared/ui/Stack';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { AppText, TextSize } from '@/shared/ui/AppText/AppText';
+import { ArticleList } from '@/entities/Article';
+import { VStack } from '@/shared/ui/Stack';
 import {
     useArticleRecommendationsList,
 } from '../../api/aritcleRecommendationsApi';
@@ -30,7 +30,6 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
             <ArticleList
                 articles={articles}
                 target="_blank"
-                virtualized={false}
             />
         </VStack>
     );

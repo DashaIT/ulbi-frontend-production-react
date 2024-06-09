@@ -1,12 +1,12 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { AppButton, ButtonTheme } from 'shared/ui/AppButton';
-import { AppInput } from 'shared/ui/AppInput';
+import { AppButton, ButtonTheme } from '@/shared/ui/AppButton';
+import { AppInput } from '@/shared/ui/AppInput';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
-import { AppText, AppTextTheme } from 'shared/ui/AppText/AppText';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { AppText, AppTextTheme } from '@/shared/ui/AppText/AppText';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
