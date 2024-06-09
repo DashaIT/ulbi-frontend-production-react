@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppModal } from 'shared/ui/AppModal/AppModal';
+import { Modal } from 'shared/ui/Modal/Modal';
 import { Suspense } from 'react';
 import { AppLoader } from 'shared/ui/AppLoader/AppLoader';
 import { LoginFormAsync } from '../LoginForm/LoginForm.async';
@@ -18,7 +18,7 @@ export const LoginModal = (props: LoginModalProps) => {
     } = props;
 
     return (
-        <AppModal
+        <Modal
             className={classNames('', {}, [className])}
             isOpen={isOpen}
             onClose={onClose}
@@ -26,6 +26,6 @@ export const LoginModal = (props: LoginModalProps) => {
             <Suspense fallback={<AppLoader />}>
                 <LoginFormAsync onSuccess={onClose} />
             </Suspense>
-        </AppModal>
+        </Modal>
     );
 };
