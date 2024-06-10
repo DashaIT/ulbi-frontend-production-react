@@ -1,11 +1,10 @@
-import { createSlice, configureStore, PayloadAction } from '@reduxjs/toolkit';
-import { CounterSchema } from '../types/CounterSchema';
+import { PayloadAction } from '@reduxjs/toolkit';
+import { CounterSchema } from '../types/counterSchema';
 import { buildSlice } from '@/shared/lib/store';
 
 const initialState: CounterSchema = {
     value: 0,
 };
-
 
 export const counterSlice = buildSlice({
     name: 'counter',
