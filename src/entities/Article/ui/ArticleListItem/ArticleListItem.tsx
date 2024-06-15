@@ -15,6 +15,8 @@ import {
 } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
+import { AppImage } from '@/shared/ui/AppImage';
+import { Skeleton } from '@/shared/ui/Skeleton';
 
 interface ArticleListItemProps {
     className?: string;
@@ -52,7 +54,12 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     </div>
                     <AppText title={article.title} className={cls.title} />
                     {types}
-                    <img src={article.img} className={cls.img} alt={article.title} />
+                    <AppImage
+                        fallback={<Skeleton width="100%" height={250} />}
+                        src={article.img}
+                        className={cls.img}
+                        alt={article.title}
+                    />
                     {textBlock && (
                         <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
                     )}
