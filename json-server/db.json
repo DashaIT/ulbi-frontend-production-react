@@ -630,7 +630,7 @@
       "roles": [
         "ADMIN"
       ],
-      "avatar": "https://images.unsplash.com/photo-1557246565-8a3d3ab5d7f6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "avatar": "https://masterpiecer-images.s3.yandex.net/1e8639b574c611ee9dab963c1ee369ba:upscaled"
     }
   ],
   "profile": [
@@ -654,6 +654,17 @@
       "country": "Russia",
       "city": "Chita",
       "username": "admin",
+      "avatar": "https://masterpiecer-images.s3.yandex.net/1e8639b574c611ee9dab963c1ee369ba:upscaled"
+    },
+    {
+      "id": "4",
+      "first": "test",
+      "lastName": "user",
+      "age": 23,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "Chita",
+      "username": "testuser",
       "avatar": "https://masterpiecer-images.s3.yandex.net/1e8639b574c611ee9dab963c1ee369ba:upscaled"
     }
   ],

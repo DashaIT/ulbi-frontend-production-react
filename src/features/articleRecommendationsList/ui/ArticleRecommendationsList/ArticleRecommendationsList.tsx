@@ -22,7 +22,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
     }
 
     return (
-        <VStack gap="8" className={classNames('', {}, [className])}>
+        <VStack data-testid="ArticleRecommendationsList" gap="8" className={classNames('', {}, [className])}>
             <AppText
                 size={TextSize.L}
                 title={t('Рекомендуем')}
