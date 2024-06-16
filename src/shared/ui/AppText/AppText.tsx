@@ -5,7 +5,7 @@ import cls from './AppText.module.scss';
 export enum AppTextTheme {
     INVERTED = 'inverted',
     PRIMARY = 'primary',
-    ERROR = 'error'
+    ERROR = 'error',
 }
 
 export enum TextAlign {
@@ -68,10 +68,7 @@ export const AppText = memo((props: AppTextProps) => {
                 </HeaderTag>
             )}
             {text && (
-                <p
-                    className={cls.text}
-                    data-testid={`${dataTestId}.Paragraph`}
-                >
+                <p className={cls.text} data-testid={`${dataTestId}.Paragraph`}>
                     {text}
                 </p>
             )}

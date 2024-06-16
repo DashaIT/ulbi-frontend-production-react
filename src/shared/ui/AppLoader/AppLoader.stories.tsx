@@ -15,7 +15,9 @@ export default {
     },
 } as ComponentMeta<typeof AppLoader>;
 
-const Template: ComponentStory<typeof AppLoader> = (args) => <AppLoader {...args} />;
+const Template: ComponentStory<typeof AppLoader> = (args) => (
+    <AppLoader {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};

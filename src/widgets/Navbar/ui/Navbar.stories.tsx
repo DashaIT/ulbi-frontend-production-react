@@ -18,14 +18,16 @@ const Template: ComponentStory<typeof Navbar> = () => <Navbar />;
 
 export const AuthNavbar = Template.bind({});
 
-AuthNavbar.decorators = [StoreDecorator({
-    user: {
-        authData: {
-            id: '1',
-            username: 'admin',
+AuthNavbar.decorators = [
+    StoreDecorator({
+        user: {
+            authData: {
+                id: '1',
+                username: 'admin',
+            },
         },
-    },
-})];
+    }),
+];
 
 export const Light = Template.bind({});
 Light.args = {};

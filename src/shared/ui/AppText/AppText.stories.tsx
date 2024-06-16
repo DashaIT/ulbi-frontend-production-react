@@ -11,7 +11,9 @@ export default {
     },
 } as ComponentMeta<typeof AppText>;
 
-const Template: ComponentStory<typeof AppText> = (args) => <AppText {...args} />;
+const Template: ComponentStory<typeof AppText> = (args) => (
+    <AppText {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {

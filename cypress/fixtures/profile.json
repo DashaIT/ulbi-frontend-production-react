@@ -1,11 +1,11 @@
 {
-  "id": "1",
-  "first": "test",
-  "lastname": "user",
-  "age": 465,
-  "currency": "EUR",
-  "country": "Russia",
-  "city": "Chita",
-  "username": "testuser",
-  "avatar": "https://masterpiecer-images.s3.yandex.net/1e8639b574c611ee9dab963c1ee369ba:upscaled"
+    "id": "1",
+    "first": "test",
+    "lastname": "user",
+    "age": 465,
+    "currency": "EUR",
+    "country": "Russia",
+    "city": "Chita",
+    "username": "testuser",
+    "avatar": "https://masterpiecer-images.s3.yandex.net/1e8639b574c611ee9dab963c1ee369ba:upscaled"
 }

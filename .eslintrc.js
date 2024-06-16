@@ -4,7 +4,12 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['airbnb', 'plugin:react/recommended', 'plugin:i18next/recommended'],
+    extends: [
+        'airbnb',
+        'plugin:react/recommended',
+        'plugin:i18next/recommended',
+        'prettier',
+    ],
     parser: '@typescript-eslint/parser',
     overrides: [
         {
@@ -37,10 +42,10 @@ module.exports = {
         'unused-imports',
     ],
     rules: {
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
-        indent: [2, 4],
-        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+        'react/jsx-filename-extension': [
+            2,
+            { extensions: ['.js', '.jsx', '.tsx'] },
+        ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'off',
@@ -51,15 +56,18 @@ module.exports = {
         'no-shadow': 'off',
         'no-underscore-dangle': 'off',
         'import/extensions': 'off',
-        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+        'import/no-extraneous-dependencies': [
+            'error',
+            { devDependencies: true },
+        ],
         'no-console': 'off',
-        'i18next/no-literal-string':
-            ['warn',
-                {
-                    markupOnly: true,
-                    ignoreAttribute: ['as', 'role', 'data-testid', 'to'],
-                },
-            ],
+        'i18next/no-literal-string': [
+            'warn',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['as', 'role', 'data-testid', 'to'],
+            },
+        ],
         'max-len': ['error', { ignoreComments: true, code: 130 }],
         'linebreak-style': ['error', 'unix'],
         'jsx-a11y/click-events-have-key-events': 'off',
@@ -82,14 +90,18 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
             },
         ],
+        'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
     },
     globals: {
         __IS_DEV__: true,
         __API__: true,
         __PROJECT__: true,
     },
-
 };

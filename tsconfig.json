@@ -30,16 +30,12 @@
         // можно писать такой
         // import React from 'react';
         "allowSyntheticDefaultImports": true,
-        "isolatedModules": true,
+        "isolatedModules": true
     },
     "ts-node": {
         "compilerOptions": {
             "module": "CommonJS"
         }
     },
-    "include": [
-        "./config/jest/jest-setup.ts",
-        "./src/**/*",
-    ],
-
+    "include": ["./config/jest/jest-setup.ts", "./src/**/*"]
 }

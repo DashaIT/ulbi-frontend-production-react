@@ -4,8 +4,8 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppButton, ButtonTheme } from '@/shared/ui/AppButton';
 
 interface LangSwitcherProps {
-    className?: string,
-    short?: boolean,
+    className?: string;
+    short?: boolean;
 }
 
 export const LangSwitcher = memo(({ className, short }: LangSwitcherProps) => {
