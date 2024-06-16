@@ -12,13 +12,13 @@ export const resetProfile = (profileId: string) => cy.request({
     body: {
         id: '4',
         first: 'test',
-        lastName: 'user',
-        age: 23,
+        lastname: 'user',
+        age: 465,
         currency: 'EUR',
-        country: 'Russia',
-        city: 'Chita',
+        country: 'Ukraine',
+        city: 'Moscow',
         username: 'testuser',
-        avatar: 'https://masterpiecer-images.s3.yandex.net/1e8639b574c611ee9dab963c1ee369ba:upscaled',
+        avatar: 'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
     },
 });
 
