@@ -2,14 +2,18 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Card } from '@/shared/ui/Card';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { AppText } from '@/shared/ui/AppText';
-import { StarRating } from '@/shared/ui/StarRating';
-import { Modal } from '@/shared/ui/Modal';
-import { AppInput } from '@/shared/ui/AppInput';
-import { AppButton, ButtonSize, ButtonTheme } from '@/shared/ui/AppButton';
-import { Drawer } from '@/shared/ui/Drawer';
+import { Card } from '@/shared/ui/deprecated/Card';
+import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import { AppText } from '@/shared/ui/deprecated/AppText';
+import { StarRating } from '@/shared/ui/deprecated/StarRating';
+import { Modal } from '@/shared/ui/deprecated/Modal';
+import { AppInput } from '@/shared/ui/deprecated/AppInput';
+import {
+    AppButton,
+    ButtonSize,
+    ButtonTheme,
+} from '@/shared/ui/deprecated/AppButton';
+import { Drawer } from '@/shared/ui/deprecated/Drawer';
 
 interface RatingCardProps {
     className?: string;

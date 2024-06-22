@@ -2,9 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppButton, ButtonTheme } from '@/shared/ui/AppButton';
-import { AppInput } from '@/shared/ui/AppInput';
-import { AppText, AppTextTheme } from '@/shared/ui/AppText';
+import { AppButton, ButtonTheme } from '@/shared/ui/deprecated/AppButton';
+import { AppInput } from '@/shared/ui/deprecated/AppInput';
+import { AppText, AppTextTheme } from '@/shared/ui/deprecated/AppText';
 import {
     DynamicModuleLoader,
     ReducersList,

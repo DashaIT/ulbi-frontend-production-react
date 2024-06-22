@@ -2,14 +2,14 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppInput } from '@/shared/ui/AppInput';
-import { AppButton, ButtonTheme } from '@/shared/ui/AppButton';
+import { AppInput } from '@/shared/ui/deprecated/AppInput';
+import { AppButton, ButtonTheme } from '@/shared/ui/deprecated/AppButton';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { HStack } from '@/shared/ui/Stack';
+import { HStack } from '@/shared/ui/deprecated/Stack';
 import {
     addCommentFormActions,
     addCommentFormReducer,
