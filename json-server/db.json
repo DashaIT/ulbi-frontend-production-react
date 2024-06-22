@@ -625,7 +625,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": false,
-        "isCounterEnabled": false
+        "isCounterEnabled": false,
+        "isAppRedesigned": false
       },
       "avatar": "https://masterpiecer-images.s3.yandex.net/1e8639b574c611ee9dab963c1ee369ba:upscaled",
       "jsonSettings": {
@@ -642,7 +643,9 @@
       ],
       "features": {
         "isArticleRatingEnabled": false,
-        "isCounterEnabled": true
+        "isCounterEnabled": true,
+        "isAppRedesigned": false
+
       },
       "avatar": "https://masterpiecer-images.s3.yandex.net/1e8639b574c611ee9dab963c1ee369ba:upscaled"
     },
@@ -655,7 +658,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isCounterEnabled": true
+        "isCounterEnabled": true,
+        "isAppRedesigned": false
       },
       "avatar": "https://masterpiecer-images.s3.yandex.net/1e8639b574c611ee9dab963c1ee369ba:upscaled"
     }
