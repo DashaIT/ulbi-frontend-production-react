@@ -6,14 +6,14 @@ import { Card } from '@/shared/ui/deprecated/Card';
 import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { AppText } from '@/shared/ui/deprecated/AppText';
 import { StarRating } from '@/shared/ui/deprecated/StarRating';
-import { Modal } from '@/shared/ui/deprecated/Modal';
+import { Modal } from '@/shared/ui/redesigned/Modal';
 import { AppInput } from '@/shared/ui/deprecated/AppInput';
 import {
     AppButton,
     ButtonSize,
     ButtonTheme,
 } from '@/shared/ui/deprecated/AppButton';
-import { Drawer } from '@/shared/ui/deprecated/Drawer';
+import { Drawer } from '@/shared/ui/redesigned/Drawer';
 
 interface RatingCardProps {
     className?: string;
