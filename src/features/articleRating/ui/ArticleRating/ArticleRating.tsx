@@ -7,7 +7,7 @@ import {
     useRateArticle,
 } from '../../api/articleRatingApi';
 import { getUserAuthData } from '@/entities/User';
-import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 
 export interface ArticleRatingProps {
     className?: string;
@@ -35,6 +35,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
                     feedback,
                 });
             } catch (e) {
+                // handle error
                 console.log(e);
             }
         },
