@@ -20,5 +20,8 @@
     "Введите текст": "Enter text",
     "Форма авторизации": "Auth form",
     "Неверный логин или пароль": "Uncorrect username or password",
-    "Выйти": "Выйти"
+    "Выйти": "Выйти",
+    "просмотров_few": "{{count}} views",
+    "просмотров_one": "{{count}} view",
+    "просмотров_many": "{{count}} views"
 }
