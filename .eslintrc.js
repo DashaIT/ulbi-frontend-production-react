@@ -65,7 +65,15 @@ module.exports = {
             'warn',
             {
                 markupOnly: true,
-                ignoreAttribute: ['as', 'role', 'data-testid', 'to', 'feature'],
+                ignoreAttribute: [
+                    'as',
+                    'role',
+                    'data-testid',
+                    'to',
+                    'feature',
+                    'color',
+                    'variant',
+                ],
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 130 }],
