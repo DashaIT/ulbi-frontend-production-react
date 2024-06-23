@@ -1,4 +1,10 @@
-import { ButtonHTMLAttributes, ReactNode, memo } from 'react';
+import {
+    ButtonHTMLAttributes,
+    ForwardedRef,
+    ReactNode,
+    forwardRef,
+    memo,
+} from 'react';
 import { Mods, classNames } from '@/shared/lib/classNames/classNames';
 import cls from './AppButton.module.scss';
 
@@ -48,34 +54,37 @@ interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
  * Устарел, используем новые компоненты из папки redesigned
  * @deprecated
  */
-export const AppButton = memo((props: AppButtonProps) => {
-    const {
-        className,
-        children,
-        theme = ButtonTheme.OUTLINE,
-        square,
-        size = ButtonSize.M,
-        disabled,
-        fullWidth,
-        ...otherProps
-    } = props;
+export const AppButton = forwardRef(
+    (props: AppButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
+        const {
+            className,
+            children,
+            theme = ButtonTheme.OUTLINE,
+            square,
+            size = ButtonSize.M,
+            disabled,
+            fullWidth,
+            ...otherProps
+        } = props;
 
-    const mods: Mods = {
-        [cls[theme]]: true,
-        [cls.square]: square,
-        [cls[size]]: true,
-        [cls.disabled]: disabled,
-        [cls.fullWidth]: fullWidth,
-    };
+        const mods: Mods = {
+            [cls[theme]]: true,
+            [cls.square]: square,
+            [cls[size]]: true,
+            [cls.disabled]: disabled,
+            [cls.fullWidth]: fullWidth,
+        };
 
-    return (
-        <button
-            type="button"
-            className={classNames(cls.appbutton, mods, [className])}
-            disabled={disabled}
-            {...otherProps}
-        >
-            {children}
-        </button>
-    );
-});
+        return (
+            <button
+                type="button"
+                className={classNames(cls.appbutton, mods, [className])}
+                disabled={disabled}
+                ref={ref}
+                {...otherProps}
+            >
+                {children}
+            </button>
+        );
+    },
+);
